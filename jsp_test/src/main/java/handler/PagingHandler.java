@@ -1,0 +1,109 @@
+package handler;
+//hadler -> jsp화면에서 무언가를 조회하기 위한 용
+
+import domain.PagingVO;
+
+public class PagingHandler {
+	private int startPage; //현재 화면에서 보여줄 시작 페이지 번호 1, 11, 21 ...
+	private int endPage; //현재 화면에서 보여줄 끝 페이지 번호 10, 20, 30 ...
+	private int realEndPage; //실제 전체 끝 페이지 번호
+	private boolean prev, next; //이전, 다음 페이지 존재 여부
+	
+	private int totalCount; //전체 글 수
+	private PagingVO pgvo;
+	
+	public PagingHandler(int totalCount, PagingVO pgvo) {
+		this.totalCount = totalCount;
+		this.pgvo = pgvo;
+		
+		//endPage -> 1~10까지는 10, 11~20 20, 21~30 30, 31~40 40
+		//페이지번호 / 한 화면의 게시글 수(10) * 한 화면의 게시글 수(10)
+		//소수점이 나오면 그냥 올려서 1로 만들어버린다. ceil로
+		// ceil(1 / 10 = 0.1)=1 * 10 = 10 
+		// ceil(2 / 10 ) * 10 = 10 -> endPage
+		// 1~10까지는 endPage가 다 10이 나오도록
+		// ceil(11 / 10 = 1.1)= 2 * 10 = 20 -> endPage
+		// 11~20까지는 endPage가 다 20이 나오도록
+		//ceil은 더블 형태로 리턴되므로 인트로 형변환해주고, 정수/정수=정수 0이 나오므로 둘 중 하나를 형변환
+		this.endPage = (int)Math.ceil(pgvo.getPageNo() / (double)pgvo.getQty()) * pgvo.getQty();
+		this.startPage = this.endPage - 9;
+		
+		//게시글 수 = 11개면 1,2페이지가 있어야 함.
+		//전체 게시글 수 / 한 화면의 게시글 수
+		//나머지가 생기면 무조건 1페이지 더 생겨야 함.
+		//페이지네이션 마지막 페이지
+		this.realEndPage = (int)Math.ceil(totalCount / (double)pgvo.getQty());
+		//총 페이지수가 21페이지까지 있다면 21페이지의 endPage는 30으로 설정되어있는데 
+		//ceil(21 / 10=2.1)=3 * 10 = 30
+		//실제 30페이지까지 뜨면 안되니까 endPage를 realEndPage로 설정해준다.
+		if(this.realEndPage < this.endPage) {
+			this.endPage = this.realEndPage;
+		}
+		
+		//시작 페이지가 1보다 더 크면 무조건 이전은 있어야 함.
+		//startPage는 1, 11, 21, 31 ...임 1보다 큰거면 11 또는 21 또는 31...
+		this.prev = this.startPage > 1; //존재여부만
+		this.next = this.endPage < this.realEndPage;
+		
+	}
+
+	public int getStartPage() {
+		return startPage;
+	}
+
+	public void setStartPage(int startPage) {
+		this.startPage = startPage;
+	}
+
+	public int getEndPage() {
+		return endPage;
+	}
+
+	public void setEndPage(int endPage) {
+		this.endPage = endPage;
+	}
+
+	public int getRealEndPage() {
+		return realEndPage;
+	}
+
+	public void setRealEndPage(int realEndPage) {
+		this.realEndPage = realEndPage;
+	}
+
+	public boolean isPrev() {
+		return prev;
+	}
+
+	public void setPrev(boolean prev) {
+		this.prev = prev;
+	}
+
+	public boolean isNext() {
+		return next;
+	}
+
+	public void setNext(boolean next) {
+		this.next = next;
+	}
+
+	public int getTotalCount() {
+		return totalCount;
+	}
+
+	public void setTotalCount(int totalCount) {
+		this.totalCount = totalCount;
+	}
+
+	public PagingVO getPgvo() {
+		return pgvo;
+	}
+
+	public void setPgvo(PagingVO pgvo) {
+		this.pgvo = pgvo;
+	}
+	
+	
+	
+	
+}

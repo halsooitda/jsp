@@ -1,0 +1,143 @@
+package controller;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.CommentVO;
+import service.CommentService;
+import service.CommentServiceImpl;
+
+//댓글 => 비동기방식 => 페이지 이동 방식X => destPage, requestDispatcher 필요없음
+//웹 페이지 전체를 다시 로딩하지 않고도, 웹 페이지의 일부분만을 갱신할 수 있다.
+@WebServlet("/cmt/*")
+public class CommentController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static final Logger log = LoggerFactory.getLogger(CommentController.class);
+    private CommentService csv;
+    private int isOk;
+	
+    public CommentController() {
+    	csv = new CommentServiceImpl();
+    }
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		//비동기방식이니까 jsp에서 받아야 할 컨텐츠 타입 설정X
+		
+		String uri = request.getRequestURI();
+		// /brd/detail?bno=1 => 동기방식 주소체계
+		// 동기방식 => get(쿼리스트링으로 달고 데이터를 보냄), post(데이터를 숨기고 보냄)
+		// /cmt/list/10, /cmt/post, /cmt/update => RestAPI 방식
+		// get=>리스트 보여줄때, post=>등록시, put=>update할때, delete=>delete할때
+		String pathUri = uri.substring("/cmt/".length()); 
+		// "/cmt/".length() = /cmt/의 길이부터 시작해서 끝까지 
+		// /cmt/를 뗀 다음부터 가져오기 ex)post, list/10
+		String path = pathUri;
+		String pathVar = ""; //없으면 공백처리
+		if(pathUri.contains("/")) { //list/10처럼 패스값을 달고 왔다면
+			path = pathUri.substring(0,pathUri.lastIndexOf("/")); //list
+			pathVar = pathUri.substring(pathUri.lastIndexOf("/")+1); //10
+		}
+		
+		log.info(">>> uri "+uri);
+		log.info(">>> pathUri "+pathUri);
+		log.info(">>> path "+path);
+		log.info(">>> pathVar "+pathVar);
+		
+		switch(path) {
+		case "post" :
+			try {
+				//js에서 보낸 데이터를 StringBuffer로 읽어들이는 작업
+				//JSON 방식으로 화면에서 보낸 데이터를 받을 준비
+				//json-simple-1.1.1 라이브러리를 사용하여
+				//JSON 형태의 스트링을 객체 형태로 변환
+				StringBuffer sb = new StringBuffer(); //String을 여러개 누적할 수 있는 객체
+				//append용
+				String line = "";
+				//Post 방식으로 보낸 값 읽어올 때 BufferedReader br = req.getReader() 
+				BufferedReader br = request.getReader(); //cmtData를 받아오는 객체
+				while((line = br.readLine()) != null) { //값이 남아있다면, readLine : 한줄씩 읽어오기
+					sb.append(line); //댓글 한줄씩 누적
+				}
+				log.info(">>>>> sb : "+sb.toString());
+				//sb : {"bno":"182","writer":"kang","content":"zz"} => 객체임.
+				
+				//객체로 변환
+				//JSON 형태로 변환해주는 parser
+				JSONParser parser = new JSONParser(); //parser -> String만 변환 가능함 그래서 스트링버퍼 객체인 sb를 toString해줌
+				JSONObject jsonObj = (JSONObject)parser.parse(sb.toString());
+				//JSONParser = String 형태를 JSON 형태로 parser, JSON 객체 생성 = JSONObject
+
+				//CommentVO 형태로 변환
+				int bno = Integer.parseInt(jsonObj.get("bno").toString());
+				String writer = jsonObj.get("writer").toString();
+				String content = jsonObj.get("content").toString();
+				
+				//csv DB로 저장
+				CommentVO cvo = new CommentVO(bno, writer, content);
+				log.info(">>>>> cvo : "+cvo);
+				isOk = csv.post(cvo);
+				log.info("post >>>>> "+((isOk>0)? "성공":"실패"));
+				
+				//화면에 출력
+				//값을 화면으로 내보낼때 PrintWriter out = res.getWriter();
+				PrintWriter out = response.getWriter();
+				out.print(isOk); //화면으로 데이터를 보내달라는 의미
+				
+			} catch (Exception e) {
+				log.info("post >>>>> error");
+				e.printStackTrace();
+			}
+			break;
+		//----------------------------------------------------------------------------------------
+		case "list" : //list/182
+			try {
+				int bno = Integer.parseInt(pathVar);
+				List<CommentVO> list = csv.getList(bno);
+				
+				
+			} catch (Exception e) {
+				log.info("list >>>>> error");
+				e.printStackTrace();
+			}
+			
+			break;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		}//switch
+		
+	}
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		service(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		service(request, response);
+	}
+
+}

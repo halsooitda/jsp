@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Board Modify Page</h1>
+<form action="/brd/edit" method="post">
+<table border="1">
+	<tr>
+		<th>BNO</th>
+		<td><input type="text" value="${bvo.bno }" name="bno" readonly="readonly"></td>
+	</tr>
+	<tr>
+		<th>TITLE</th>
+		<td><input type="text" value="${bvo.title }" name="title"></td>
+	</tr>
+	<tr>
+		<th>WRITER</th>
+		<td>${bvo.writer }</td>
+	</tr>
+	<tr>
+		<th>CONTENT</th>
+		<td><textarea rows="3" cols="30" name="content">${bvo.content }</textarea></td>
+	</tr>
+	<tr>
+		<th>IMAGE</th>
+		<td>
+			<c:if test="${bvo.image_File ne '' && bvo.image_File ne null }">
+					<img src="/_fileUpload/${bvo.image_File }">	
+			</c:if>
+			<input type="hidden" name="image_file" value="${bvo.image_File }">
+			<input type="file" name="new_file" ">
+		</td>
+	</tr>
+	<tr>
+		<th>REG_DATE</th>
+		<td>${bvo.regdate }</td>
+	</tr>
+	<tr>
+		<th>MOD_DATE</th>
+		<td>${bvo.moddate }</td>
+	</tr>
+	<tr>
+		<th>READ</th>
+		<td>${bvo.readcount }</td>
+	</tr>
+</table>
+<button type="submit">수정</button>
+</form>
+<a href="/brd/pageList"><button type="button">list</button></a>
+</body>
+</html>

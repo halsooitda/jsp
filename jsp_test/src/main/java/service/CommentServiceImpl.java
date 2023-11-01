@@ -1,0 +1,50 @@
+package service;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.CommentVO;
+import repository.CommentDAO;
+import repository.CommentDAOImpl;
+
+public class CommentServiceImpl implements CommentService {
+	private static final Logger log = LoggerFactory.getLogger(CommentServiceImpl.class);
+	private CommentDAO cdao;
+	
+	public CommentServiceImpl() {
+		cdao = new CommentDAOImpl();
+	}
+
+	@Override
+	public int post(CommentVO cvo) {
+		return cdao.post(cvo);
+	}
+
+	@Override
+	public List<CommentVO> getList(int bno) {
+		return cdao.getList(bno);
+	}
+
+	@Override
+	public int update(CommentVO cvo) {
+		return cdao.update(cvo);
+	}
+
+	@Override
+	public int delete(int cno) {
+		return cdao.delete(cno);
+	}
+
+	public int commentCount(int bno) {
+		//BoardServiceImpl에서 보내온 댓글 개수 메서드
+		return cdao.commentCount(bno);
+	}
+
+	public int deleteAll(int bno) {
+		//BoardServiceImpl에서 보내온 댓글 삭제 메서드
+		return cdao.deleteAll(bno);
+	}
+	
+}

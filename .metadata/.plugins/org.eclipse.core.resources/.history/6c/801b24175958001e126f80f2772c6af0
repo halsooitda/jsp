@@ -1,0 +1,27 @@
+package domain;
+
+public class MemberVO {
+	private String id;
+	private String pwd;
+	private String nickname;
+	private String email;
+	private int age;
+	private String regdate;
+	private String lastlogin;
+	
+	public MemberVO() {}
+
+	//join, modify
+	public MemberVO(String id, String pwd, String nickname, String email, int age) {
+		this.id = id;
+		this.pwd = pwd;
+		this.nickname = nickname;
+		this.email = email;
+		this.age = age;
+	}
+	
+	//update
+	
+	
+	
+}

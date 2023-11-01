@@ -1,0 +1,23 @@
+package repository;
+
+import java.util.List;
+
+import domain.MemberVO;
+
+public interface MemberDAO {
+
+	int join(MemberVO mvo);
+
+	MemberVO login(MemberVO mvo);
+
+	int lastLogin(String id);
+
+	List<MemberVO> getList();
+
+	int update(MemberVO mvo);
+
+	int delete(String id);
+
+	int exist(String id);
+
+}

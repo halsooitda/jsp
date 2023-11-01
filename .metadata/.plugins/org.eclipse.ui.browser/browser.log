@@ -1,0 +1,100 @@
+
+9월 21, 2023 16:00:50.207 NEW SESSION
+9월 21, 2023 16:00:50.207 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 16:28:35.475 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 16:47:17.327 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 17:08:07.107 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 17:18:02.859 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 17:19:14.571 [2904:10028:0921/171914.571:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:14.716 [2904:10028:0921/171914.716:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:14.817 [2904:10028:0921/171914.817:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:14.920 [2904:10028:0921/171914.919:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:15.465 [2904:10028:0921/171915.465:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:15.716 [2904:10028:0921/171915.716:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:18.838 [2904:10028:0921/171918.838:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:19.247 [2904:10028:0921/171919.247:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:19.581 [2904:10028:0921/171919.581:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:19.854 [2904:10028:0921/171919.854:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:20.17 [2904:10028:0921/171920.017:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:20.119 [2904:10028:0921/171920.119:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:20.945 [2904:10028:0921/171920.945:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:21.67 [2904:10028:0921/171921.067:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 17:19:28.132 [2904:10028:0921/171928.132:ERROR:page_load_metrics_update_dispatcher.cc(178)] Invalid first_paint 0.502 s for first_image_paint 0.486 s
+9월 21, 2023 21:12:28.558 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 21:21:29.720 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 21, 2023 21:44:23.35 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 22, 2023 15:41:43.206 NEW SESSION
+9월 22, 2023 15:41:43.207 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 22, 2023 21:30:51.600 NEW SESSION
+9월 22, 2023 21:30:51.600 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 22, 2023 21:32:21.458 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 25, 2023 17:50:37.44 NEW SESSION
+9월 25, 2023 17:50:37.44 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 19:33:13.425 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 19:39:27.577 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 19:40:46.886 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 19:55:12.271 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 20:00:14.613 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 20:02:36.970 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2023 20:13:49.837 [6364:8456:0925/201349.837:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 25, 2023 20:22:00.496 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+9월 26, 2023 15:30:57.757 NEW SESSION
+9월 26, 2023 15:30:57.757 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 26, 2023 16:06:25.116 [6832:6836:0926/160625.116:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 26, 2023 16:32:34.01 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 26, 2023 17:26:09.697 [2760:12916:0926/172609.697:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 26, 2023 17:26:09.697 [2760:12916:0926/172609.697:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 26, 2023 18:01:30.216 [2760:12916:0926/180130.216:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:01:30.216 [2760:12916:0926/180130.216:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:02:32.194 [2760:12916:0926/180232.193:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:02:32.194 [2760:12916:0926/180232.193:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:02:35.204 [2760:12916:0926/180235.204:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:02:35.204 [2760:12916:0926/180235.204:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:02:36.197 [2760:12916:0926/180236.197:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:02:36.198 [2760:12916:0926/180236.197:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:03:54.201 [2760:12916:0926/180354.201:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:03:54.201 [2760:12916:0926/180354.201:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:07:45.197 [2760:12916:0926/180745.197:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:07:45.197 [2760:12916:0926/180745.197:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:07:46.201 [2760:12916:0926/180746.201:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:07:46.201 [2760:12916:0926/180746.201:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:07:48.194 [2760:12916:0926/180748.194:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:07:48.194 [2760:12916:0926/180748.194:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:07:49.203 [2760:12916:0926/180749.203:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:07:49.203 [2760:12916:0926/180749.203:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:07:51.217 [2760:12916:0926/180751.217:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:07:51.217 [2760:12916:0926/180751.217:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:11.202 [2760:12916:0926/180811.201:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:11.202 [2760:12916:0926/180811.202:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:12.200 [2760:12916:0926/180812.200:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:12.200 [2760:12916:0926/180812.200:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:15.193 [2760:12916:0926/180815.192:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:15.193 [2760:12916:0926/180815.192:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:16.195 [2760:12916:0926/180816.195:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:16.195 [2760:12916:0926/180816.195:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:17.207 [2760:12916:0926/180817.207:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:17.207 [2760:12916:0926/180817.207:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:32.206 [2760:12916:0926/180832.206:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:32.207 [2760:12916:0926/180832.206:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:34.189 [2760:12916:0926/180834.188:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:34.189 [2760:12916:0926/180834.189:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:37.210 [2760:12916:0926/180837.210:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:37.210 [2760:12916:0926/180837.210:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:38.192 [2760:12916:0926/180838.191:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:38.192 [2760:12916:0926/180838.191:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:08:48.243 [2760:12916:0926/180848.243:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:08:48.243 [2760:12916:0926/180848.243:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 18:09:14.197 [2760:12916:0926/180914.197:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 26, 2023 18:09:14.198 [2760:12916:0926/180914.197:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+9월 26, 2023 19:27:39.107 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 26, 2023 20:03:03.775 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 26, 2023 20:53:28.501 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 26, 2023 21:18:39.366 [8904:2432:0926/211839.366:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 26, 2023 21:19:59.272 [8904:2432:0926/211959.272:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+9월 27, 2023 15:40:13.903 NEW SESSION
+9월 27, 2023 15:40:13.903 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

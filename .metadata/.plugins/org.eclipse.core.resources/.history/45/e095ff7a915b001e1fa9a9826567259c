@@ -1,0 +1,81 @@
+package domain;
+
+public class PagingVO {
+	private int pageNo; //현재 화면에 출력되는 페이지 번호
+	private int qty; //한 페이지당 보여줄 게시글 수 = 10개
+	
+	private String writer;
+	
+	//페이지네이션(번호)을 클릭하기 전 기본리스트 출력값
+	public PagingVO() {
+		this(1,10);
+	}
+
+	//클릭하면 설정되는 값
+	public PagingVO(int pageNo, int qty) {
+		this.pageNo = pageNo;
+		this.qty = qty;
+		//qty 받아와서 10개씩 받을 수도 있고, 15개씩, 5개씩도 가능
+	}
+	
+	//DB에서 어떻게 조회할 것인지 값을 설정하는 용 
+	//limit 시작번지, 출력개수(10)
+	//0 10 20 30 -> 시작번지
+	//1  2  3  4 -> pageNo
+	//1-1*10 = 0번지
+	//2-1*10 = 1번지
+	public int getPageStart() {
+		return (pageNo-1)*qty; //DB에서 조회할 시작번지 구하기
+	}
+//---------------------------------------------------
+	//2.검색 멤버변수 추가
+	private String type; //검색 대상
+	private String keyword; //검색어
+	
+	//type이 여러개 들어올 때 값을 배열로 리턴
+	public String[] getTypeToArray() { //get반드시 붙여야 함.
+		return (this.type == null)? new String[] {} : this.type.split(""); //한글자씩 쪼갬
+ 	}
+	
+	public int getPageNo() {
+		return pageNo;
+	}
+
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	public int getQty() {
+		return qty;
+	}
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+	
+	
+}

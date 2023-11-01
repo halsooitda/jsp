@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	form{
+		width: 1000px;
+		height: 800px;
+		
+		position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);	
+	
+	}
+</style>
+</head>
+<body>
+
+<h1>Board Register Page</h1>
+
+<form action="/brd/insert" method="post" enctype="multipart/form-data"> 
+<input type="text" name="title" placeholder="title"> <br>
+<input type="text" name="writer" value=${ses.id }> <br>
+<textarea rows="3" cols="30" name="content" placeholder="content"></textarea> <br>
+<input type="file" name="image_file"> <br>
+<button type="submit">등록</button>
+<a href="/index.jsp"><button type="button">index</button></a>
+</form>
+
+</body>
+</html>
